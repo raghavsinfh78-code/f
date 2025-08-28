@@ -31,14 +31,5 @@ socket.on("chat message", (msg) => {
   messages.scrollTop = messages.scrollHeight;
 });
 
-// Emoji picker
-const picker = new EmojiButton();
 
-emojiBtn.addEventListener("click", () => {
-  picker.togglePicker(emojiBtn);
-});
 
-picker.on("emoji", (emoji) => {
-  input.value += emoji;
-  input.focus();
-});
